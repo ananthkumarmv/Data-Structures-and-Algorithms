@@ -8,16 +8,18 @@ struct Node{
 	Node *next;
 	
 	Node(int x){
-		int data;
+		data =x;
 		next = NULL;
 	}
 };
 
 
-Node insertEnd(Node *head, int x){
+Node* insertEnd(Node *head, int x){
 	
 	Node *temp = new Node(x);
-	if(head==NULL) return temp;
+	if(head==NULL){
+		return temp;
+	} 
 	
 	Node *curr = head;
 	
@@ -31,7 +33,10 @@ Node insertEnd(Node *head, int x){
 
 
 void print(Node *head){
-	while()
+	while(head!=NULL){
+		cout<<head->data<<" ";
+		head=head->next;
+	}
 }
 
 

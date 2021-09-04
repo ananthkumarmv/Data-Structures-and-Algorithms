@@ -22,6 +22,7 @@ Node *insertBegin(Node *head, int x){
 	return temp;
 }
 
+
 void print(Node *head){
 	while(head!=NULL){
 		cout<<(head->data)<<" ";
