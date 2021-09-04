@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void print(vector<vector<int>> &arr){
+void print(vector< vector<int> > &arr){
 	for(int i=0; i<arr.size();i++){
 		for(int j=0;j<arr[i].size(); j++)
 			cout<<arr[i][j]<<" ";
@@ -16,7 +16,7 @@ void print(vector<vector<int>> &arr){
 
 int main() {
 	int m=3, n=2;
-	vector<vector<int>> arr;       //creating vector of vector
+	vector< vector<int> > arr;       //creating vector of vector
 	for(int i=0; i<m; i++){
 		vector<int> v;            //creating individual rows
 		for(int j=0;j<n;j++)
