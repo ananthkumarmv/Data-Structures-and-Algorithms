@@ -27,7 +27,7 @@ Node *reverseDLL(Node *head){
 	return prev->prev;
 }
 
-
+ 
 
 int main(){
 	
