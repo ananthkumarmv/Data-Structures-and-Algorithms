@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int firstOcc(int *a, int low, int high, int key){
+int firstOcc(int *a, int n, int low, int high, int key){
 	while(low<=high){
 		int mid = low+(high-low)/2;
 		
@@ -11,7 +11,7 @@ int firstOcc(int *a, int low, int high, int key){
 		else if(a[mid]<key) low = mid+1; 
 		
 		else{
-			if(mid==0 || a[mid]!=a[mid+1]) return mid;
+			if(mid==n-1 || a[mid]!=a[mid+1]) return mid;
 			
 			else low = mid+1;
 		}
@@ -29,7 +29,7 @@ int main(){
 	int key;
 	cin>>key;
 	
-	cout<<firstOcc(a, 0, n-1, key);
+	cout<<firstOcc(a, n, 0, n-1, key);
 
 	return 0;
 }

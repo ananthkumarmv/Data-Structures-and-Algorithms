@@ -6,19 +6,19 @@
 using namespace std;
 
 
-int lastOcc(int *a, int low, int high, int key){
+int lastOcc(int *a, int n, int low, int high, int key){
 	if(low>high) return -1;
 	
 	int mid = low + (high-low)/2;
 	
-	if(key>a[mid]) return lastOcc(a, mid+1, high, key);
+	if(key>a[mid]) return lastOcc(a, n, mid+1, high, key);
 	
-	else if(key<a[mid]) return lastOcc(a, low, mid-1, key);
+	else if(key<a[mid]) return lastOcc(a, n, low, mid-1, key);
 	
 	else{
-		if(mid==0 || a[mid+1]!=a[mid]) return mid;
+		if(mid==n-1 || a[mid+1]!=a[mid]) return mid;
 		
-		else return lastOcc(a, mid+1, high, key);
+		else return lastOcc(a, n, mid+1, high, key);
 	}
 }
 
@@ -35,7 +35,7 @@ int main(){
 	int key;
 	cin>>key;
 	
-	cout<<lastOcc(a, 0, n-1, key);
+	cout<<lastOcc(a, n, 0, n-1, key);
 
 	return 0;
 }
