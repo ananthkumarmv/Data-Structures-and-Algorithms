@@ -15,11 +15,10 @@ void removeDuplicates(char a[]){
 		if(a[current]!=a[prev]){
 			prev++;
 			a[prev] = a[current];
-			
 		}
 	}
 	a[prev+1] = '\0';
-	return;
+	cout<<a;
 }
 
 
@@ -27,8 +26,6 @@ int main(){
 	char a[1000];
 	cin.getline(a, 1000);
 	removeDuplicates(a);
-	
-	cout<<a<<endl;
 	return 0;
 }
 
