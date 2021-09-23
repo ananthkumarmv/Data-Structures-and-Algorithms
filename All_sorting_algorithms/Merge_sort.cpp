@@ -38,7 +38,7 @@ void merge(int a[], int low, int mid, int high){
 
 int merge_sort(int a[],int low, int high){
 	int mid=0;
-	if(low<high){
+	if(low<high){					// atleast 2 eles
 		mid=low+(high-low)/2;
 		merge_sort(a,low,mid);
 		merge_sort(a,mid+1,high);
