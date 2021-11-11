@@ -8,7 +8,6 @@ bool compare(string a, string b){
 	return a<b;
 }
 
-
 void removeDupWord(string str){
 	string word = "";
 	vector<string> s;
