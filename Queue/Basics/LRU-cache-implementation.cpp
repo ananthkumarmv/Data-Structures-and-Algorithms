@@ -48,6 +48,7 @@ void LRUCache::refer(int x)
     ma[x] = dq.begin();
 }
  
+
 // Function to display contents of cache
 void LRUCache::display()
 {
