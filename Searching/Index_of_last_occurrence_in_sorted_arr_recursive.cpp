@@ -23,7 +23,6 @@ int lastOcc(int *a, int n, int low, int high, int key){
 }
 
 
-
 int main(){
 	
 	int n;
