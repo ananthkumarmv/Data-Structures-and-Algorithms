@@ -20,7 +20,6 @@ void merge(int *a, int *b, int m, int n){
 	for(int i=0;i<m+n;i++) cout<<c[i]<<" ";
 }
 
-
 int main(){
 	
 	int m, n;
