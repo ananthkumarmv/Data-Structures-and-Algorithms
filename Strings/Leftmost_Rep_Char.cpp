@@ -13,6 +13,7 @@ int leftMostRepChar(string &str){
 
 int main(){
 	
+	
 	string str;
 	cin>>str;
 	
