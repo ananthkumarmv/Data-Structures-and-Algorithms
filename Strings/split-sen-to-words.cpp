@@ -18,7 +18,6 @@ void removeDupWord(string str){
 }
 
 
-
 int main(){
 	
 	string str = "My name is Amith";
