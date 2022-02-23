@@ -24,6 +24,7 @@ int main(){
 		else res+=c;
 	}
 	
+	
 	cout<<res;
 
 
