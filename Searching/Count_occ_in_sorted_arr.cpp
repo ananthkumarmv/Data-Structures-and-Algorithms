@@ -39,7 +39,6 @@ int firstOcc(int *a, int n, int low, int high, int key){
 }
 
 
-
 int totOcc(int *a, int n, int low, int high, int key){
 	int first = firstOcc(a, n, low, high, key);
 	if(first==-1) return 0;
