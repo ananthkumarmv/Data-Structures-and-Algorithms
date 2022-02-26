@@ -24,6 +24,7 @@ void prime_factors(int n){
 	if(f==0) cout<<n;
 }
 
+
 int main() {
 	int n;
 	cin>>n;
