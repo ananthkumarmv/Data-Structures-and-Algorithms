@@ -13,6 +13,7 @@ int maxPieces(int n, int a, int b, int c){
 }
 
 
+
 int main(){
 	
 	cout<<maxPieces(5, 2, 5, 1);
