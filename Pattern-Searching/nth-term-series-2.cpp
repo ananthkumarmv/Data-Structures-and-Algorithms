@@ -1,3 +1,4 @@
+//Find Nth term of the series 0, 2, 4, 8, 12, 18...
 #include<iostream>
 
 using namespace std;
