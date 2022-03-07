@@ -19,11 +19,59 @@ void printList(struct Node* node){
 
 // function to create newNode
 // in a LL
-NOde* newNode(int key){
+Node* newNode(int key){
 	Node* temp = new Node;
 	temp->data = key;
 	temp->next = NULL;
 	return temp;
+}
+
+
+Node* insertBeg(Node* head, int val)
+{
+    Node* temp = newNode(val);
+    temp->next = head;
+    head = temp;
+    return head;
+}
+  
+// Function to rearrange the
+// odd and even nodes
+void rearrangeOddEven(Node* head)
+{
+    stack<Node*> odd;
+    stack<Node*> even;
+    int i = 1;
+  
+    while (head != NULL) {
+  
+        if (head->data % 2 != 0 && i % 2 == 0) {
+  
+            // Odd Value in Even Position
+            // Add pointer to current node
+            // in odd stack
+            odd.push(head);
+        }
+  
+        else if (head->data % 2 == 0 && i % 2 != 0) {
+  
+            // Even Value in Odd Postion
+            // Add pointer to current node
+            // in even stack
+            even.push(head);
+        }
+  
+        head = head->next;
+        i++;
+    }
+  
+    while (!odd.empty() && !even.empty()) {
+  
+        // Swap Data at the top of two stacks
+        swap(odd.top()->data, even.top()->data);
+        odd.pop();
+        even.pop();
+    }
 }
 
 
