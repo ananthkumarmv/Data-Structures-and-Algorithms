@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 
+// 0(R*C)
 using namespace std;
 
 void spiralTraversal(vector< vector<int> > &mat){
