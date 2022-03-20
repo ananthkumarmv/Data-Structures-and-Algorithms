@@ -39,6 +39,34 @@ Node* insert(int arr[], int n){
 	return root;
 }
 
+
+Node* deleteHeadNode(Node** root){
+	Node* temp = *root;
+	if(temp == NULL) 
+		return NULL;
+		
+	Node *ptr = temp->next;
+	delete temp;
+	return ptr;
+}
+
+void deleteLastNode(Node **root){
+	Node* temp = *root;
+	if(temp == NULL) return;
+	
+	if(temp->next==NULL){
+		delete temp;
+		return;
+	}
+	else{
+		while(temp->next->next != NULL)
+			temp = temp->next;
+		
+		delete(temp->next);
+		temp->next = NULL;
+	}
+}
+
 void deleteNode(Node** root, int key){
 	Node* temp = *root;
 	Node* prev = NULL;
@@ -85,6 +113,13 @@ int main(){
 	
 	deleteNode(&root, 4);
 	display(root);
+	
+	root = deleteHeadNode(&root);
+	display(root);
+	
+	deleteLastNode(&root);
+	display(root);
+	
 
     return 0;
 }
