@@ -134,6 +134,25 @@ int search(Node** root, int x){
 	return -1;
 }
 
+int searchItr(Node** root, int x){
+	Node* temp = *root;
+	int pos=1;
+	
+	while(temp!=NULL){
+		if(temp->data == x)
+			return pos;
+		else{
+			pos++;
+			temp= temp->next;
+		}
+	}
+	
+	return -1;
+}
+
+int searchRR(Node** root, int x)
+
+
 
 void display(Node* root){
 	while(root!=NULL){
