@@ -1,3 +1,7 @@
+#include<iostream>
+
+using namespace std;
+
 class Node{
 	public:
 		int data;
@@ -36,7 +40,7 @@ Node* insert(int arr[], int n){
 void printMiddle(Node* root){
 	if(root == NULL) return;
 	
-	Node *slow = root, fast = root;
+	Node *slow = root, *fast = root;
 	
 	while(fast != NULL && fast->next != NULL){
 		slow = slow->next;
