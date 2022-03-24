@@ -15,11 +15,22 @@ struct myStack
 	}
 	
 	void push(int x){
+		
+		if(top == cap-1){
+			cout<<"Overflow";
+			return;
+		}
+		
 		top++;
 		arr[top] = x;
 	}
 	
 	int pop(){
+		if(top == -1){
+			cout<<"Underflow";
+			return -1;
+		}
+		
 		int res = arr[top];
 		top--;
 		return res;
@@ -48,6 +59,9 @@ int main(){
 	
 	cout<<s.pop()<<endl;
 	cout<<s.size()<<endl;
+	cout<<s.pop()<<endl;
+	cout<<s.pop()<<endl;
+	cout<<s.pop()<<endl;
 	cout<<s.peek()<<endl;
 	cout<<s.isEmpty()<<endl;
 
