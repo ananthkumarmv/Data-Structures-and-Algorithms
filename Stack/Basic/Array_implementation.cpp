@@ -7,19 +7,20 @@ struct myStack
 	int *arr;
 	int cap;
 	int top;
+	
 	myStack(int c){
-		cap=c;
+		cap = c;
 		arr = new int[cap];
 		top=-1;
 	}
 	
 	void push(int x){
 		top++;
-		arr[top]=x;
+		arr[top] = x;
 	}
 	
 	int pop(){
-		int res=arr[top];
+		int res = arr[top];
 		top--;
 		return res;
 	}
@@ -28,14 +29,13 @@ struct myStack
 		return arr[top];
 	}
 	
-	int size()
-	{
-		return (top+1);
+	int size(){
+		return top+1;
 	}
+	
 	bool isEmpty(){
 		return (top==-1);
 	}
-
 };
 
 
