@@ -2,85 +2,85 @@
 
 using namespace std;
 
-
-struct Node
-{
-	int data;
-	Node* next;
+class Node{
+	public:
+		int data;
+		Node* next;
 };
 
-Node *newNode(int data)
-{
-    Node *new_node = new Node;
-    new_node->data = data;
+Node* newNode(int data){
+	Node* new_node = new Node;
+	new_node->data = data;
 	new_node->next = NULL;
-    return new_node;
+	
+	return new_node;
 }
 
 
-Node *reverse(Node *head){
-	Node *prev = NULL;
-	Node *current = head;
-	Node *next;
+Node* reverse(Node* head){
+	if(head == NULL) return NULL;
 	
-	while(current != NULL){
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
+	Node* prev = NULL;
+	Node* curr = head;
+	Node* next;
+	
+	while(curr != NULL){
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
 	}
 	
 	return prev;
+	
 }
 
-Node *addOneUtil(Node *head){
-	// res is head node of the resultant list
-	Node *res = head;
+
+Node* addOneUtil(Node* head){
+	Node* res = head;
 	Node *temp, *prev = NULL;
 	
 	int carry = 1, sum;
 	
-	while(head!=NULL){
-		sum = carry+head->data;
+	while(head != NULL){
+		sum = carry + head->data;
 		
 		carry = (sum>=10) ? 1:0;
 		
-		sum=sum%10;
+		sum = sum%10;
 		
 		head->data = sum;
-		
 		temp = head;
 		head = head->next;
 	}
 	
-	if(carry>0) 
+	if(carry > 0) 
 		temp->next = newNode(carry);
 		
-		return res;
+	return res;
+	
 }
 
-
-Node* addOne(Node *head){
+Node* addOne(Node* head){
 	
-	// reverse ll
+	// reversing LL
 	head = reverse(head);
 	
-	//adding one from left to right of reversed ll
+	// Adding 1 from lest to right of reversed list
 	head = addOneUtil(head);
 	
-	//reversing modified ll
-	return reverse(head);
+	head = reverse(head);
+	
+	return head;
 }
 
 
 
-void printList(Node *node){
-	
-	while(node!=NULL){
-		cout<<node->data;
-		node=node->next;
+void printList(Node* head){
+	while(head != NULL){
+		cout<<head->data;
+		head = head->next;
 	}
-	cout<<endl;
 }
 
 
@@ -88,17 +88,14 @@ int main(){
 	
 	Node *head = newNode(1);
 	head->next = newNode(9);
-	head->next->next= newNode(9);
+	head->next->next = newNode(9);;
 	head->next->next->next = newNode(9);
 	
-	cout<<"Before: ";
 	printList(head);
 	
 	head = addOne(head);
 	
-	cout<<"After: ";
 	printList(head);
 	
 	return 0;
 }
-
