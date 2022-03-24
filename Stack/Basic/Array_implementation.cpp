@@ -37,6 +37,9 @@ struct myStack
 	}
 	
 	int peek(){
+		if(top == -1){
+			
+		}
 		return arr[top];
 	}
 	
