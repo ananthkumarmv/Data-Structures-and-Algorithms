@@ -52,6 +52,7 @@ int main(){
 	cout<<q.deQueue()<<'\n';
 	cout<<q.deQueue()<<'\n';
 
+
     return 0;
 }
 
