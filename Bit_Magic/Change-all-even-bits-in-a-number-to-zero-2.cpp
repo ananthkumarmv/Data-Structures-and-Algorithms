@@ -5,7 +5,7 @@ using namespace std;
 int changeEvenBitToOne(int n){
 	
 	int a=1;
-    for(int i=0;i<31;i=i+2){
+    for(int i=0;i<32;i=i+2){
         n=n&(~(a<<i));
     }
     return n;
