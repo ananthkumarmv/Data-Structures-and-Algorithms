@@ -41,10 +41,10 @@ int main(){
 	int arr[n];
 	for(int i=0; i<n; i++) cin>>arr[i];
 	
-	int k;
-	cin>>k;
+	int ele;
+	cin>>ele;
 	
-	deleteElements(arr, n, k);
+	deleteElements(arr, n, ele);
 
 
     return 0;
