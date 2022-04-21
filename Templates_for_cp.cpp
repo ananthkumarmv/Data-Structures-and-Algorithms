@@ -28,6 +28,7 @@ void c_p_c()
 #endif
 }
 
+
 int main(){
 	c_p_c();
 
