@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 struct Queue{
 	int *arr;
 	int front, cap, size;
