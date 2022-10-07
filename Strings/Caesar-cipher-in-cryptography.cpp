@@ -8,10 +8,10 @@ string encodeString(string str){
 	for(int i=0; i<str.length(); i++){
 		
 		if(isupper(str[i]))
-			result = result + char(int(str[i] + 13 - 65)%26 + 65);
+			result = result + char(int(str[i] - 65 + 13)%26 + 65);
 		
 		else if(islower(str[i]))
-			result = result + char(int(str[i] + 13 - 97)%26 + 97);
+			result = result + char(int(str[i] - 97 + 13)%26 + 97);
 		
 		else 
 			result = result + str[i];
