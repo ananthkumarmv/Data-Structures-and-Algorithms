@@ -3,6 +3,14 @@
 using namespace std;
 
 #define SIZE 10
+#define N 3
+
+void sortAllWay(int mat[][N]){
+	
+	int *ptr = (int *)mat;
+	sort(ptr, ptr+N+N);
+	
+}
 
 
 // O(n^2log2(n))

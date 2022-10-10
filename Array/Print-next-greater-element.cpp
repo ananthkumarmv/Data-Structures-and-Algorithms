@@ -2,6 +2,8 @@
 #include<stack>
 using namespace std;
 
+//O(n^2)
+//O(1)
 void printNGE(int arr[], int n){
 	int next;
 	
@@ -19,6 +21,8 @@ void printNGE(int arr[], int n){
 	
 }
 
+//O(n)
+//O(n)
 void printNGE2(int arr[], int n)
 {
     stack<int> s;
@@ -54,7 +58,7 @@ int main(){
 	int arr[n];
 	for(int i=0; i<n; i++) cin>>arr[i];
 	
-	printNGE(arr, n);
+//	printNGE(arr, n);
 	printNGE2(arr, n);
 
 	return 0;
