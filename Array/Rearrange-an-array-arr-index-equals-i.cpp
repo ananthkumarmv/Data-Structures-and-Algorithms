@@ -1,42 +1,40 @@
-#include <iostream>
-using namespace std;
- 
-void fixArray(int ar[], int n)
-{
-    int i, j, temp;
- 
-    for (i = 0; i < n; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            if (ar[j] == i) {
-                temp = ar[j];
-                ar[j] = ar[i];
-                ar[i] = temp;
-                break;
-            }
-        }
-    }
- 
-    for (i = 0; i < n; i++)
-    {
-        if (ar[i] != i)
-        {
-            ar[i] = -1;
-        }
-    }
- 
-    for (i = 0; i < n; i++) {
-        cout << ar[i] << " ";
-    }
-}
- 
+#include<iostream>
 
-int main()
-{
-    int n, ar[] = { -1, -1, 6, 1, 9, 3, 2, -1, 4, -1 };
-    n = sizeof(ar) / sizeof(ar[0]);
- 
-    fixArray(ar, n);
+using namespace std;
+
+void fixArray(int arr[], int n){
+	
+	int temp;
+	for(int i=0; i<n; i++){
+		for(int j=0; j<n; j++){
+			if(arr[j] == i){
+				temp = arr[j];
+				arr[j] = arr[i];
+				arr[i] = temp;
+				break;
+			}
+		}
+	}
+	
+	for(int i=0; i<n; i++)
+		if(arr[i] != i)
+			arr[i] = -1;
+	
 }
- 
+
+int main(){
+	int n;
+	cin>>n;
+	
+	int arr[n];
+	
+	for(int i=0; i<n; i++) 
+		cin>>arr[i];
+		
+	fixArray(arr, n);
+	
+	for(int i=0; i<n; i++)
+		cout<<arr[i]<<" ";
+
+	return 0;
+}
