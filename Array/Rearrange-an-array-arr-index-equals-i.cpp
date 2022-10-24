@@ -2,7 +2,9 @@
 
 using namespace std;
 
-void fixArray(int arr[], int n){
+// O(n^2)
+// O(1)
+void fixArray1(int arr[], int n){
 	
 	int temp;
 	for(int i=0; i<n; i++){
@@ -21,6 +23,20 @@ void fixArray(int arr[], int n){
 			arr[i] = -1;
 	
 }
+
+// O(n)
+// O(1)
+
+void fixArray(int arr[], int n){
+	
+	for(int i=0; i<n; i++){
+		
+		if(arr[i] )
+		
+	}
+	
+}
+
 
 int main(){
 	int n;
